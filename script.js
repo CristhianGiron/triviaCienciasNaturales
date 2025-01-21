@@ -53,7 +53,7 @@ const preguntas = {
           pregunta: "¿Qué tipo de animal es el delfín?", 
           opciones: ["Reptil", "Aves", "Mamífero", "Peces"], 
           respuesta: "Mamífero", 
-          imagen: "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2018/04/18/15240513993600.jpg" 
+          imagen: "https://content.nationalgeographic.com.es/medio/2024/03/14/istock_f9ffc5ff_1442686499_240314112404_800x800.jpg" 
       }
   ],
   2: [
