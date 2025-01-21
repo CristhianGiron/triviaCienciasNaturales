@@ -279,3 +279,15 @@ function reiniciarJuego() {
   document.getElementById("inicio").classList.remove("hidden");
 }
 
+// Seleccionar el elemento de audio
+const audio = document.getElementById("audio");
+
+// Intentar reproducir el audio automáticamente
+window.addEventListener("load", () => {
+  audio.play().then(() => {
+    console.log("El audio comenzó a reproducirse automáticamente.");
+  }).catch((error) => {
+    console.error("El navegador bloqueó la reproducción automática:", error);
+  });
+});
+
