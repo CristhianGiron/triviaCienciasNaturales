@@ -11,6 +11,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
   background-position: center; /* Centra la imagen en la pantalla */
+  overflow-x: hidden;
 }
 
 
@@ -29,6 +30,7 @@ body {
 }
 
 button {
+  width: 125px;
   margin: 10px;
   padding: 10px 20px;
   border: none;
