@@ -104,7 +104,7 @@ p{
   display: flex;
   align-items: center;       /* Alinea verticalmente */
   justify-content: center;
-  height: 45px;
+  height: auto;
   background-image: url(https://cdn.pixabay.com/photo/2018/03/11/20/25/wooden-3217987_960_720.jpg);
   background-repeat: no-repeat;
   background-size: cover;    /* Asegura que la imagen de fondo cubra todo el contenedor */
@@ -120,10 +120,11 @@ p{
 }
 .controls{
   position: relative;
+  
 }
 .atras{
   position: absolute;
-  left: -35px;
+  left: -75px;
   top: -28px;
   background-color: transparent !important;
   background-image: url(./hacia-atras.png);
@@ -149,4 +150,11 @@ p{
 .img-logo{
   height: 200px;
   filter: drop-shadow(4px 4px 6px rgb(0, 0, 0)); /* Sombra al borde de la imagen */
+}
+
+.footer {
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 11px; /* Tamaño de fuente ajustable */
+  color: #333; /* Color de texto (ajustable) */
+  margin-top: 10px; /* Espacio desde el contenido anterior */
 }

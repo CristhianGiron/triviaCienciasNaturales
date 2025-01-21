@@ -210,6 +210,7 @@ function siguientePregunta() {
   preguntasUsadas.push(index);
   preguntaActual = nivelPreguntas[index];
   document.getElementById("atras").classList.remove("hidden");
+  document.getElementById("img-logo").classList.add("hidden");
   document.getElementById("pregunta").innerText = preguntaActual.pregunta;
 
   const img = document.getElementById("imagenPregunta");
@@ -261,7 +262,8 @@ function verificarRespuesta(opcionSeleccionada) {
 
 // Función para mostrar resultados
 function mostrarResultados() {
-    document.getElementById("atras").classList.add("hidden");
+    document.getElementById("img-logo").classList.remove("hidden");
+  document.getElementById("atras").classList.add("hidden");
   document.getElementById("juego").classList.add("hidden");
   document.getElementById("resultado").classList.remove("hidden");
   const mensaje = puntaje === 6 ? "¡Excelente trabajo!" : "Sigue practicando y lo harás mejor.";
@@ -270,6 +272,7 @@ function mostrarResultados() {
 
 // Función para reiniciar el juego
 function reiniciarJuego() {
+    document.getElementById("img-logo").classList.remove("hidden");
     document.getElementById("atras").classList.add("hidden");
   document.getElementById("juego").classList.add("hidden");
   document.getElementById("resultado").classList.add("hidden");
