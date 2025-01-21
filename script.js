@@ -298,6 +298,7 @@ const audio = document.getElementById("audio");
         if (muted) {
             muted=false
         }else{
+            audio.play()
             muted=true
         }
       audio.muted = muted; // Desactivar el silencio
