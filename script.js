@@ -261,6 +261,7 @@ function verificarRespuesta(opcionSeleccionada) {
 
 // Función para mostrar resultados
 function mostrarResultados() {
+    document.getElementById("atras").classList.add("hidden");
   document.getElementById("juego").classList.add("hidden");
   document.getElementById("resultado").classList.remove("hidden");
   const mensaje = puntaje === 3 ? "¡Excelente trabajo!" : "Sigue practicando y lo harás mejor.";
@@ -269,6 +270,7 @@ function mostrarResultados() {
 
 // Función para reiniciar el juego
 function reiniciarJuego() {
+    document.getElementById("atras").classList.add("hidden");
   document.getElementById("juego").classList.add("hidden");
   document.getElementById("resultado").classList.add("hidden");
   document.getElementById("inicio").classList.remove("hidden");
