@@ -79,37 +79,37 @@ const preguntas = {
           pregunta: "¿Es el nombre científico del ser humano?", 
           opciones: ["Homo sapiens", "Homo erectus", "Homo habilis", "Homo neanderthalensis"], 
           respuesta: "Homo sapiens", 
-          imagen: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Human_evolution.svg" 
+          imagen: "https://c.files.bbci.co.uk/A0E0/production/_109448114_zambezi3.png" 
       },
       { 
           pregunta: "¿Es el tipo de energía que proviene del Sol?", 
           opciones: ["Química", "Térmica", "Nuclear", "Solar"], 
           respuesta: "Solar", 
-          imagen: "https://cdn.pixabay.com/photo/2020/04/25/18/30/solar-panels-5097994_1280.jpg" 
+          imagen: "https://enercitysa.com/oavyrdix/2022/07/inclinacion-panel-solar.jpg" 
       },
       { 
           pregunta: "¿En qué parte de la planta ocurre la fotosíntesis?", 
           opciones: ["Raíces", "Hojas", "Tallos", "Flores"], 
           respuesta: "Hojas", 
-          imagen: "https://cdn.pixabay.com/photo/2015/11/17/04/33/leaf-1044741_1280.jpg" 
+          imagen: "https://strapi.morfologiavegetal.info/uploads/small_Platanus_hispani_030_viveza_89041d6719.jpg" 
       },
       { 
           pregunta: "¿Cómo se llama el proceso mediante el cual las plantas absorben agua?", 
           opciones: ["Transpiración", "Absorción", "Condensación", "Evaporación"], 
           respuesta: "Absorción", 
-          imagen: "https://cdn.pixabay.com/photo/2016/05/28/12/42/spring-1424582_1280.jpg" 
+          imagen: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgte5UowhJclyQ5N2A5sF2THEK_FxN8O1YjtvnHmipb_hveg4y-kSbS3laxUFEDk-_Xd9MGGGRAv3pDTtwF6LaBcOOi3-xFHHbutORDjB5pOdut2pExUHZn3mYV8_eEaS1r-nrQ4dbWNTR9/s1600/ESScience5_A1_Q1-4.jpg" 
       },
       { 
           pregunta: "¿En qué capa de la atmósfera se encuentra la capa de ozono?", 
           opciones: ["Troposfera", "Estratosfera", "Mesosfera", "Exosfera"], 
           respuesta: "Estratosfera", 
-          imagen: "https://cdn.pixabay.com/photo/2017/12/06/08/47/ozone-3006423_1280.jpg" 
+          imagen: "https://media.istockphoto.com/id/621992042/es/vector/la-principal-capas-ambiente-de-la-tierra.jpg?s=612x612&w=0&k=20&c=4AhmmJMuCKk6-fbvTKMMvSUrqvIMk6qbI2CvH_M3K6o=" 
       },
       { 
           pregunta: "¿Qué tipo de energía se genera a partir del movimiento del agua?", 
           opciones: ["Energía solar", "Energía hidroeléctrica", "Energía eólica", "Energía térmica"], 
           respuesta: "Energía hidroeléctrica", 
-          imagen: "https://cdn.pixabay.com/photo/2020/06/15/07/18/water-5291714_1280.jpg" 
+          imagen: "https://blogs.iadb.org/energia/wp-content/uploads/sites/16/2023/02/shutterstock_1997751206.jpg" 
       }
   ],
   3: [
@@ -135,43 +135,43 @@ const preguntas = {
           pregunta: "¿Es el tipo de enlace que une los átomos de una molécula de agua?", 
           opciones: ["Iónico", "Metálico", "Covalente", "Puente de hidrógeno"], 
           respuesta: "Covalente", 
-          imagen: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Water_molecule_3D_ball.png" 
+          imagen: "https://concepto.de/wp-content/uploads/2018/08/enlace-covalente-simple-e1535458209730.jpg" 
       },
       { 
           pregunta: "¿Es el nombre del estudio de los genes y la herencia?", 
           opciones: ["Biología", "Química", "Genética", "Física"], 
           respuesta: "Genética", 
-          imagen: "https://cdn.pixabay.com/photo/2016/06/15/12/37/dna-1459905_1280.jpg" 
+          imagen: "https://www.ibbiotech.com/uploads/imagenes/paginas/galeria/201507/galeria-que-es-la-genetica.jpg" 
       },
       { 
           pregunta: "¿Qué estructura en las células es responsable de producir energía?", 
           opciones: ["Núcleo", "Mitocondrias", "Ribosomas", "Cloroplastos"], 
           respuesta: "Mitocondrias", 
-          imagen: "https://cdn.pixabay.com/photo/2019/12/04/17/28/molecule-4670321_1280.jpg" 
+          imagen: "https://genotipia.com/wp-content/uploads/2024/05/mitocondria-canva.jpg" 
       },
       { 
           pregunta: "¿En qué parte de la célula se lleva a cabo la fotosíntesis?", 
           opciones: ["Citoesqueleto", "Mitocondrias", "Cloroplastos", "Núcleo"], 
           respuesta: "Cloroplastos", 
-          imagen: "https://cdn.pixabay.com/photo/2016/04/25/00/23/photosynthesis-1359824_1280.jpg" 
+          imagen: "https://s1.significados.com/foto/cloroplastos-21_bg.jpg?class=article" 
       },
       { 
           pregunta: "¿Es el proceso que permite que los organismos se reproduzcan?", 
           opciones: ["Crecimiento", "Reproducción", "Desarrollo", "Adaptación"], 
           respuesta: "Reproducción", 
-          imagen: "https://cdn.pixabay.com/photo/2019/06/14/20/57/reproduce-4281175_1280.jpg" 
+          imagen: "https://oceanomedicina.com/wp-content/uploads/2020/09/Complicaciones-en-la-reproduccion-causas-y-medidas-preventivas-2.jpg" 
       },
       { 
           pregunta: "¿Qué fenómeno natural ocurre cuando la luz pasa a través de un material diferente?", 
           opciones: ["Reflexión", "Refracción", "Difracción", "Absorción"], 
           respuesta: "Refracción", 
-          imagen: "https://cdn.pixabay.com/photo/2017/05/22/18/57/prism-2331097_1280.jpg" 
+          imagen: "https://www.dzoom.org.es/wp-content/uploads/2020/01/fototip-refraccion-1-734x413.png" 
       },
       { 
           pregunta: "¿Quién es conocido como el padre de la teoría de la evolución?", 
           opciones: ["Charles Darwin", "Albert Einstein", "Isaac Newton", "Galileo Galilei"], 
           respuesta: "Charles Darwin", 
-          imagen: "https://cdn.pixabay.com/photo/2016/03/10/20/29/charles-darwin-1247103_1280.jpg" 
+          imagen: "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/0D35/production/_120718330_gettyimages-1306714436.jpg.webp" 
       }
   ]
 };
