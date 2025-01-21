@@ -7,7 +7,7 @@ const preguntas = {
           respuesta: "Tierra", 
           imagen: "https://cdn.pixabay.com/photo/2020/11/22/14/58/earth-5766860_1280.png" 
       },
-      { 
+      {
           pregunta: "¿Es un mamífero que vuela?", 
           opciones: ["Águila", "Murciélago", "Pato", "Pelícano"], 
           respuesta: "Murciélago", 
@@ -279,15 +279,27 @@ function reiniciarJuego() {
   document.getElementById("inicio").classList.remove("hidden");
 }
 
-// Seleccionar el elemento de audio
+
 const audio = document.getElementById("audio");
 
-// Intentar reproducir el audio automáticamente
-window.addEventListener("load", () => {
-  audio.play().then(() => {
-    console.log("El audio comenzó a reproducirse automáticamente.");
-  }).catch((error) => {
-    console.error("El navegador bloqueó la reproducción automática:", error);
-  });
-});
+    // Intentar reproducir el audio automáticamente
+    window.addEventListener("load", () => {
+      audio.play().then(() => {
+        console.log("El audio comenzó a reproducirse automáticamente.");
+      }).catch((error) => {
+        console.error("El navegador bloqueó la reproducción automática:", error);
+      });
+    });
 
+    // Activar el sonido al hacer clic en el botón
+    const playButton = document.getElementById("playAudio");
+    let muted=false;
+    playButton.addEventListener("click", () => {
+        if (muted) {
+            muted=false
+        }else{
+            muted=true
+        }
+      audio.muted = muted; // Desactivar el silencio
+      
+    });
