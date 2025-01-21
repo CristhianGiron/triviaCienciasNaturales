@@ -180,9 +180,12 @@ let nivelSeleccionado;
 let preguntasUsadas = [];
 let puntaje = 0;
 let preguntaActual;
-
+const audio = document.getElementById("audio");
 // Función para seleccionar el nivel
 function seleccionarNivel(nivel) {
+  audio.play()
+  document.getElementById("playAudio").classList.remove("hidden");
+
   nivelSeleccionado = nivel;
   preguntasUsadas = [];
   puntaje = 0;
@@ -193,7 +196,7 @@ function seleccionarNivel(nivel) {
 
 // Función para mostrar una nueva pregunta
 function siguientePregunta() {
-
+  
 
   if (preguntasUsadas.length >= 6) {
       mostrarResultados();
@@ -262,7 +265,7 @@ function verificarRespuesta(opcionSeleccionada) {
 
 // Función para mostrar resultados
 function mostrarResultados() {
-    document.getElementById("img-logo").classList.remove("hidden");
+  document.getElementById("img-logo").classList.remove("hidden");
   document.getElementById("atras").classList.add("hidden");
   document.getElementById("juego").classList.add("hidden");
   document.getElementById("resultado").classList.remove("hidden");
@@ -272,15 +275,15 @@ function mostrarResultados() {
 
 // Función para reiniciar el juego
 function reiniciarJuego() {
-    document.getElementById("img-logo").classList.remove("hidden");
-    document.getElementById("atras").classList.add("hidden");
+  document.getElementById("img-logo").classList.remove("hidden");
+  document.getElementById("atras").classList.add("hidden");
   document.getElementById("juego").classList.add("hidden");
   document.getElementById("resultado").classList.add("hidden");
   document.getElementById("inicio").classList.remove("hidden");
 }
 
 
-const audio = document.getElementById("audio");
+
 
     // Intentar reproducir el audio automáticamente
     window.addEventListener("load", () => {
@@ -297,9 +300,12 @@ const audio = document.getElementById("audio");
     playButton.addEventListener("click", () => {
         if (muted) {
             muted=false
+            document.getElementById("playAudio").classList.remove("play");
+            document.getElementById("playAudio").classList.add("pause");
         }else{
-            audio.play()
             muted=true
+            document.getElementById("playAudio").classList.add("play");
+            document.getElementById("playAudio").classList.remove("pause");
         }
       audio.muted = muted; // Desactivar el silencio
       
