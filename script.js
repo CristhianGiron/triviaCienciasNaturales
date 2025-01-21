@@ -193,6 +193,8 @@ function seleccionarNivel(nivel) {
 
 // Función para mostrar una nueva pregunta
 function siguientePregunta() {
+
+
   if (preguntasUsadas.length >= 3) {
       mostrarResultados();
       return;
@@ -207,7 +209,7 @@ function siguientePregunta() {
 
   preguntasUsadas.push(index);
   preguntaActual = nivelPreguntas[index];
-
+  document.getElementById("atras").classList.remove("hidden");
   document.getElementById("pregunta").innerText = preguntaActual.pregunta;
 
   const img = document.getElementById("imagenPregunta");
@@ -267,6 +269,7 @@ function mostrarResultados() {
 
 // Función para reiniciar el juego
 function reiniciarJuego() {
+  document.getElementById("juego").classList.add("hidden");
   document.getElementById("resultado").classList.add("hidden");
   document.getElementById("inicio").classList.remove("hidden");
 }
