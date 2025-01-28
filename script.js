@@ -284,10 +284,11 @@ function reiniciarJuego() {
 
 
 
-
+    let muted=false;
     // Intentar reproducir el audio automáticamente
     window.addEventListener("load", () => {
       audio.play().then(() => {
+        muted=true;
         console.log("El audio comenzó a reproducirse automáticamente.");
       }).catch((error) => {
         console.error("El navegador bloqueó la reproducción automática:", error);
@@ -296,17 +297,18 @@ function reiniciarJuego() {
 
     // Activar el sonido al hacer clic en el botón
     const playButton = document.getElementById("playAudio");
-    let muted=false;
+    
     playButton.addEventListener("click", () => {
         if (muted) {
             muted=false
             document.getElementById("playAudio").classList.remove("play");
             document.getElementById("playAudio").classList.add("pause");
+            audio.muted = true; // Desactivar el silencio
         }else{
             muted=true
             document.getElementById("playAudio").classList.add("play");
             document.getElementById("playAudio").classList.remove("pause");
+            audio.muted = false; // Desactivar el silencio
         }
-      audio.muted = muted; // Desactivar el silencio
       
     });
