@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia de Ciencias Naturales</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
       <div class="controls">
-        <button onclick="reiniciarJuego()" class="atras hidden" id="atras"></button>
+        <button onclick="reiniciarJuego()" class="atras hidden"
+          id="atras"></button>
       </div>
-       
-        <img class="img-title" src="./generatedtext (3).png" alt="">
-        <img class="img-logo" id="img-logo" src="./distraccion.png" alt="">
-        <div id="inicio">
-            <p>Selecciona un nivel de dificultad:</p>
-            <button onclick="seleccionarNivel(1)">Fácil</button>
-            <button onclick="seleccionarNivel(2)">Intermedio</button>
-            <button onclick="seleccionarNivel(3)">Difícil</button>
-        </div>
-        <div id="juego" class="hidden">
-          <div class="img-content">
-            <div class="img-base" id="img-base">
-              <img class="img-pregunta" id="imagenPregunta" extends ParentClass {
-                super()
-              } alt="Imagen de la pregunta" class="hidden">
-            </div>
-           
-          </div>
-          
-            <p id="pregunta"></p>
-            <div id="opciones"></div>
-        </div>
-        <div id="resultado" class="hidden">
-            <p id="mensaje"></p>
-            <button onclick="reiniciarJuego()">Jugar de nuevo</button>
-        </div>
-        <div class="footer">
-          &copy; 2025 Power by Cristhian Giron
-        </div>
-          <!-- Elemento de audio -->
-          <audio id="audio" loop>
-            <source src="./adrihuwu-the-game-209106.mp3" type="audio/mpeg">
-            Tu navegador no soporta el elemento de audio.
-          </audio>
 
-        <!-- Botón para activar el sonido -->
-         <div class="audio-contenedor">
-          <button class="play" id="playAudio"></button>
-         </div>
-       
+      <img class="img-title" src="./generatedtext (3).png" alt>
+      <img class="img-logo" id="img-logo" src="./pngegg.png" alt>
+      <div id="inicio">
+        <p>Selecciona un nivel de dificultad:</p>
+        <button onclick="seleccionarNivel(1)">Fácil</button>
+        <button onclick="seleccionarNivel(2)">Intermedio</button>
+        <button onclick="seleccionarNivel(3)">Difícil</button>
+      </div>
+      <div id="juego" class="hidden">
+        <div class="img-content">
+          <div class="img-base" id="img-base">
+            <img class="img-pregunta" id="imagenPregunta" extends ParentClass {
+              super()
+              } alt="Imagen de la pregunta" class="hidden">
+          </div>
+
+        </div>
+
+        <p id="pregunta"></p>
+        <div id="barraContenedor"
+          style="width: 100%; background-image: url(https://cdn.pixabay.com/photo/2018/03/11/20/25/wooden-3217987_960_720.jpg); height: 20px; border-radius: 10px;">
+          <div id="barraProgreso"
+            style="height: 100%; background-image: url(https://cdn.pixabay.com/photo/2013/06/08/23/39/wood-123592_1280.jpg); height: 20px; border-radius: 10px;; width: 0%; border-radius: 10px;"><span id="n-usadas">0</span>/<span id="n-totales">6</span>
+          </div>
+        </div>
+
+        <div id="opciones"></div>
+      </div>
+      <div id="resultado" class="hidden">
+        <p id="mensaje"></p>
+        <button onclick="reiniciarJuego()">Jugar de nuevo</button>
+      </div>
+      <div class="footer">
+        &copy; 2025 Power by Cristhian Giron
+      </div>
+      <!-- Elemento de audio -->
+      <audio id="audio" loop>
+        <source src="./adrihuwu-the-game-209106.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+
+      <!-- Botón para activar el sonido -->
+      <div class="audio-contenedor">
+        <button class="play" id="playAudio"></button>
+      </div>
+
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
