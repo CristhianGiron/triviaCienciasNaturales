@@ -42,22 +42,43 @@
         <div id="opciones"></div>
       </div>
       <div id="resultado" class="hidden">
-        <p id="mensaje"></p>
+        <div class="content-sms">
+          <p id="mensaje"></p>
+          <img class="happy" src="./happy.png" alt="">
+        </div>
+       
         <button onclick="reiniciarJuego()">Jugar de nuevo</button>
+        <div class="separator"></div>
       </div>
       <div class="footer">
         &copy; 2025 Power by Cristhian Giron
       </div>
       <!-- Elemento de audio -->
       <audio id="audio" loop>
-        <source src="./adrihuwu-the-game-209106.mp3" type="audio/mpeg">
+        <source src="./beautiful-day-273172.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
       </audio>
 
       <!-- Botón para activar el sonido -->
       <div class="audio-contenedor">
         <button class="play" id="playAudio"></button>
+        <button class="info" id="info"></button>
+        <div id="info-content" class="info-content">
+          <img class="unl" src="https://redi.cedia.edu.ec/members/UNL.png" alt="">
+          <p class="info-sms">
+            <span class="title-info">Integrantes:</span> <br/><br/>
+            <span class="participants">
+              -NA<br/>
+              -NA<br/>
+              -NA<br/>
+              -NA<br/>
+            </span>
+           
+          </p>
       </div>
+      </div>
+
+      
 
     </div>
     <script src="script.js"></script>

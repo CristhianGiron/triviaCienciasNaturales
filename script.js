@@ -60,37 +60,37 @@ const preguntas = {
             pregunta: "¿Cuál de estos animales vive en el agua?",
             opciones: ["Gato", "Delfín", "Perro", "Gallina"],
             respuesta: "Delfín",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Common_dolphin.jpg"
+            imagen: "https://www.dolphindiscovery.com.mx/src/about/dolphins/About__Swim_WithDolphins.jpg"
         },
         {
             pregunta: "¿Qué usamos para ver?",
             opciones: ["Ojos", "Nariz", "Boca", "Orejas"],
             respuesta: "Ojos",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Human_eye_with_eyelashes.jpg"
+            imagen: "https://ntcespana.es/wp-content/uploads/2022/12/estrcutura-ojos.jpg"
         },
         {
             pregunta: "¿Qué necesitamos para respirar?",
             opciones: ["Agua", "Oxígeno", "Luz", "Azúcar"],
             respuesta: "Oxígeno",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/3/34/Oxygen_discharge_tube.jpg"
+            imagen: "https://saludconlupa.com/media/images/oxigeno-medicinal.width-640.format-webp.webp"
         },
         {
             pregunta: "¿Cuál de estos es un vegetal?",
             opciones: ["Pez", "Manzana", "Zanahoria", "Piedra"],
             respuesta: "Zanahoria",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/7/7d/CarrotDiversityLg.jpg"
+            imagen: "https://fotografias.atresmedia.com/clipping/cmsimages02/2017/02/16/43B23810-3277-4068-B6E5-5A20DA1AD560/64.jpg"
         },
         {
             pregunta: "¿Cuál de estos animales tiene caparazón?",
             opciones: ["Perro", "Gato", "Tortuga", "Caballo"],
             respuesta: "Tortuga",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/8/88/Tortoise_close_up.jpg"
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmyTRzeSgZkBN41iqwnjzVPhTubEVo34HKQ&s"
         },
         {
             pregunta: "¿Qué parte del cuerpo usamos para oler?",
             opciones: ["Ojos", "Nariz", "Manos", "Orejas"],
             respuesta: "Nariz",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Human_nose.jpg"
+            imagen: "https://granadaotorrino.com/wp-content/uploads/2015/01/106429956-330x200.jpg"
         },
         {
             pregunta: "¿Cuál de estos es un animal herbívoro?",
@@ -165,49 +165,49 @@ const preguntas = {
             pregunta: "¿Qué animal pone huevos?",
             opciones: ["Perro", "Gato", "Gallina", "Caballo"],
             respuesta: "Gallina",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Chicken_egg.jpg"
+            imagen: "https://estaticos-cdn.prensaiberica.es/clip/7bc8788b-e5a0-4f21-977a-32f965e6bf4f_16-9-discover-aspect-ratio_640w_0_x832y412.webp"
         },
         {
             pregunta: "¿Qué gas necesitan las plantas para la fotosíntesis?",
             opciones: ["Oxígeno", "Dióxido de carbono", "Nitrógeno", "Hidrógeno"],
             respuesta: "Dióxido de carbono",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Photosynthesis_equation.svg"
+            imagen: "https://concepto.de/wp-content/uploads/2018/04/co2-min-e1523637201853.jpg"
         },
         {
             pregunta: "¿Cuál de estos animales es un anfibio?",
             opciones: ["Sapo", "Tiburón", "Águila", "León"],
             respuesta: "Sapo",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Common_toad_%28Bufo_bufo%29.jpg"
+            imagen: "https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-ranas-dibujadas-mano_23-2151268621.jpg"
         },
         {
             pregunta: "¿Qué capa de la Tierra contiene agua subterránea?",
             opciones: ["Manto", "Núcleo", "Corteza", "Atmósfera"],
             respuesta: "Corteza",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Underground_water_diagram.svg"
+            imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Afiche_de_la_Tierra.svg/350px-Afiche_de_la_Tierra.svg.png"
         },
         {
             pregunta: "¿Qué tipo de energía usan las plantas para la fotosíntesis?",
             opciones: ["Química", "Solar", "Eléctrica", "Nuclear"],
             respuesta: "Solar",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Photosynthesis_in_leaves.jpg"
+            imagen: "https://pcfb.gumlet.io/images/articles/large-plant-in-sunlight.png?s=841cfb1b5736705af959eca35d7b5aed"
         },
         {
             pregunta: "¿Cuál de estos animales es un artrópodo?",
             opciones: ["Araña", "Sapo", "Pez", "Águila"],
             respuesta: "Araña",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/2/24/Spider_on_a_web.jpg"
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWzEDi1oRLs1DHcYL-Y6upVI-GmTEC8qGUg&s"
         },
         {
             pregunta: "¿Cuál de los siguientes órganos pertenece al sistema digestivo?",
             opciones: ["Pulmones", "Estómago", "Corazón", "Cerebro"],
             respuesta: "Estómago",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Diagram_of_the_human_stomach.svg"
+            imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Skrand%C5%BEio_sandara_esp.png/220px-Skrand%C5%BEio_sandara_esp.png"
         },
         {
             pregunta: "¿Qué tipo de animal es una rana?",
             opciones: ["Mamífero", "Reptil", "Anfibio", "Ave"],
             respuesta: "Anfibio",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Green_frog_on_a_leaf.jpg"
+            imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Litoria_phyllochroa.JPG/220px-Litoria_phyllochroa.JPG"
         }
     ],
     3: [
@@ -276,49 +276,49 @@ const preguntas = {
             pregunta: "¿Qué es la homeostasis en los seres vivos?",
             opciones: ["El proceso de digestión", "El mantenimiento del equilibrio interno", "La reproducción celular", "La función del ADN"],
             respuesta: "El mantenimiento del equilibrio interno",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Human_homeostasis_diagram.svg"
+            imagen: "https://portalacademico.cch.unam.mx/alumno/biologia1/unidad2/homeostasis"
         },
         {
             pregunta: "¿Cuál es el pH neutro del agua?",
             opciones: ["3", "7", "10", "14"],
             respuesta: "7",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/3/3e/PH_Scale.png"
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83N9kYUpwMvZBCiqPYLhCakhN5wo27jL8RA&s"
         },
         {
             pregunta: "¿Qué órgano humano produce insulina?",
             opciones: ["Hígado", "Riñón", "Páncreas", "Corazón"],
             respuesta: "Páncreas",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/3/34/Pancreas_diagram.svg"
+            imagen: "https://www.barnaclinic.com/blog/cirugia-del-pancreas/wp-content/uploads/sites/5/cancer-de-pancreas.jpg"
         },
         {
             pregunta: "¿Cómo se llama la molécula que transporta la información genética?",
             opciones: ["ARN", "Proteína", "Glucosa", "Lípido"],
             respuesta: "ARN",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/8/8a/DNA_RNA_structure.svg"
+            imagen: "https://images.theconversation.com/files/373201/original/file-20201206-23-mw8h41.jpg?ixlib=rb-4.1.0&rect=7%2C598%2C4985%2C2492&q=45&auto=format&w=1356&h=668&fit=crop"
         },
         {
             pregunta: "¿Qué gas se libera en la fotosíntesis?",
             opciones: ["Dióxido de carbono", "Oxígeno", "Nitrógeno", "Hidrógeno"],
             respuesta: "Oxígeno",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Leaf_closeup.jpg"
+            imagen: "https://www.appyweb.es/diccionario/wp-content/uploads/2024/03/Oxigeno.jpg"
         },
         {
             pregunta: "¿Qué componente de la sangre transporta oxígeno?",
             opciones: ["Glóbulos blancos", "Plaquetas", "Glóbulos rojos", "Plasma"],
             respuesta: "Glóbulos rojos",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/4/42/Red_blood_cells.jpg"
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWU3kFjbnXL0PQqpZycV5XT85Pyz5IYu6pnQ&s"
         },
         {
             pregunta: "¿Cuál es la función principal del ADN en los seres vivos?",
             opciones: ["Producir energía", "Regular la temperatura", "Almacenar información genética", "Transportar oxígeno"],
             respuesta: "Almacenar información genética",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/e/e4/DNA_double_helix_horizontal.png"
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh7WmJ7Wgi3vPNga_kfiQsZRRYjIhQjmONcV3PxPyExpY_m1FWQelcYABnCVBHQ4cpz1g&usqp=CAU"
         },
         {
             pregunta: "¿Cuál es el órgano más grande del cuerpo humano?",
             opciones: ["Corazón", "Piel", "Hígado", "Cerebro"],
             respuesta: "Piel",
-            imagen: "https://upload.wikimedia.org/wikipedia/commons/6/64/Human_skin_structure.svg"
+            imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Anatomy_The_Skin_-_NCI_Visuals_Online_esp.jpg/290px-Anatomy_The_Skin_-_NCI_Visuals_Online_esp.jpg"
         }
     ]
 };
@@ -328,6 +328,11 @@ let preguntasUsadas = [];
 let puntaje = 0;
 let preguntaActual;
 const audio = document.getElementById("audio");
+const tronido = new Audio('./mouse-click-290204.mp3'); // Asegúrate de que el archivo esté en la ubicación correcta
+const felicitaciones = new Audio('./kids-upbeat-274398.mp3'); // Asegúrate de que el archivo esté en la ubicación correcta
+
+// Obtener todos los botones de la página
+const botones = document.querySelectorAll('button');
 // Función para seleccionar el nivel
 function seleccionarNivel(nivel) {
     audio.play()
@@ -349,14 +354,14 @@ function siguientePregunta() {
         mostrarResultados();
         return;
     }
-    let totalPreguntas = 6; // Total de preguntas
-    let preguntasContestadas = preguntasUsadas.length; // Número de preguntas contestadas
-    const contestadas= document.getElementById("n-usadas");
-    const totales= document.getElementById("n-totales");
-    totales.innerText=totalPreguntas;
+    let totalPreguntas = 7; // Total de preguntas
+    let preguntasContestadas = preguntasUsadas.length + 1; // Número de preguntas contestadas
+    const contestadas = document.getElementById("n-usadas");
+    const totales = document.getElementById("n-totales");
+    totales.innerText = totalPreguntas - 1;
     // Función para actualizar la barra de progreso
     function actualizarProgreso() {
-        contestadas.innerText=preguntasContestadas;
+        contestadas.innerText = preguntasContestadas;
         preguntasContestadas++; // Incrementa el número de preguntas contestadas
         let porcentaje = (preguntasContestadas / totalPreguntas) * 100; // Calcula el porcentaje de progreso
         document.getElementById("barraProgreso").style.width = porcentaje + "%"; // Actualiza el ancho del progreso
@@ -403,7 +408,7 @@ function verificarRespuesta(opcionSeleccionada) {
     const img = document.getElementById("imagenPregunta");
     const img_container = document.getElementById("img-base");
     const opcionesDiv = document.getElementById("opciones").children; // Obtener todos los botones de opciones
-
+    tronido.play();
 
     if (opcionSeleccionada === preguntaActual.respuesta) {
 
@@ -491,16 +496,21 @@ function verificarRespuesta(opcionSeleccionada) {
 
 // Función para mostrar resultados
 function mostrarResultados() {
-    document.getElementById("img-logo").classList.remove("hidden");
+    felicitaciones.play();
+    audio.muted=true;
+    document.getElementById("img-logo").classList.add("hidden");
     document.getElementById("atras").classList.add("hidden");
     document.getElementById("juego").classList.add("hidden");
     document.getElementById("resultado").classList.remove("hidden");
+
     const mensaje = puntaje === 6 ? "¡Excelente trabajo!" : "Sigue practicando y lo harás mejor.";
-    document.getElementById("mensaje").innerText = `Tu puntaje final es: ${puntaje} de 6. ${mensaje}`;
+    document.getElementById("mensaje").innerText = `Tu puntaje final es: ${puntaje} de 6. ${mensaje} `;
 }
 
 // Función para reiniciar el juego
 function reiniciarJuego() {
+    felicitaciones.pause();
+    audio.muted=false;
     document.getElementById("img-logo").classList.remove("hidden");
     document.getElementById("atras").classList.add("hidden");
     document.getElementById("juego").classList.add("hidden");
@@ -521,9 +531,22 @@ window.addEventListener("load", () => {
     });
 });
 
+const info = document.getElementById("info");
+const info_content = document.getElementById("info-content");
+let estado_info= false;
+info_content.classList.add("hidden");
+info.addEventListener("click", () => {
+   if (estado_info==true) {
+    estado_info=false;
+    info_content.classList.add("hidden");
+   }else{
+    estado_info=true;
+    info_content.classList.remove("hidden");
+   }
+
+});
 // Activar el sonido al hacer clic en el botón
 const playButton = document.getElementById("playAudio");
-
 playButton.addEventListener("click", () => {
     if (muted) {
         muted = false
@@ -537,4 +560,11 @@ playButton.addEventListener("click", () => {
         audio.muted = false; // Desactivar el silencio
     }
 
+});
+
+// Añadir el mismo event listener a todos los botones
+botones.forEach(boton => {
+    boton.addEventListener('click', function () {
+        tronido.play();
+    });
 });
