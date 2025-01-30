@@ -328,8 +328,8 @@ let preguntasUsadas = [];
 let puntaje = 0;
 let preguntaActual;
 const audio = document.getElementById("audio");
-const tronido = new Audio('./mouse-click-290204.mp3'); // Asegúrate de que el archivo esté en la ubicación correcta
-const felicitaciones = new Audio('./kids-upbeat-274398.mp3'); // Asegúrate de que el archivo esté en la ubicación correcta
+const tronido = new Audio('./music/mouse-click-290204.mp3'); // Asegúrate de que el archivo esté en la ubicación correcta
+const felicitaciones = new Audio('./music/kids-upbeat-274398.mp3'); // Asegúrate de que el archivo esté en la ubicación correcta
 
 // Obtener todos los botones de la página
 const botones = document.querySelectorAll('button');
@@ -427,7 +427,7 @@ function verificarRespuesta(opcionSeleccionada) {
                 img_sms.style.position = "absolute";
                 img_sms.style.right = "0";
                 img_sms.style.top = "0";
-                img_sms.src = "./pngwing.com.png";
+                img_sms.src = "./images/pngwing.com.png";
                 img_sms.style.padding = "2px 5px";
                 img_sms.style.borderRadius = "5px";
                 img_sms.style.height = "30px";
@@ -454,7 +454,7 @@ function verificarRespuesta(opcionSeleccionada) {
                 img_sms.style.position = "absolute";
                 img_sms.style.right = "0";
                 img_sms.style.top = "0";
-                img_sms.src = "./pngwing.com (1).png"
+                img_sms.src = "./images/pngwing.com (1).png"
                 img_sms.style.padding = "2px 5px";
                 img_sms.style.borderRadius = "5px";
                 img_sms.style.height = "30px"
