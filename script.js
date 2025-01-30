@@ -1,4 +1,7 @@
-// Variables globales
+/*
+* 2025-01-29
+* Cristhian Girón
+*/
 const preguntas = {
     1: [
         {
@@ -328,12 +331,12 @@ let preguntasUsadas = [];
 let puntaje = 0;
 let preguntaActual;
 const audio = document.getElementById("audio");
-const tronido = new Audio('./music/mouse-click-290204.mp3'); // Asegúrate de que el archivo esté en la ubicación correcta
-const felicitaciones = new Audio('./music/kids-upbeat-274398.mp3'); // Asegúrate de que el archivo esté en la ubicación correcta
+const tronido = new Audio('./music/mouse-click-290204.mp3');
+const felicitaciones = new Audio('./music/kids-upbeat-274398.mp3');
 
-// Obtener todos los botones de la página
+
 const botones = document.querySelectorAll('button');
-// Función para seleccionar el nivel
+
 function seleccionarNivel(nivel) {
     audio.play()
     document.getElementById("playAudio").classList.remove("hidden");
@@ -346,7 +349,7 @@ function seleccionarNivel(nivel) {
     siguientePregunta();
 }
 
-// Función para mostrar una nueva pregunta
+
 function siguientePregunta() {
 
 
@@ -354,24 +357,20 @@ function siguientePregunta() {
         mostrarResultados();
         return;
     }
-    let totalPreguntas = 7; // Total de preguntas
-    let preguntasContestadas = preguntasUsadas.length + 1; // Número de preguntas contestadas
+    let totalPreguntas = 7;
+    let preguntasContestadas = preguntasUsadas.length + 1;
     const contestadas = document.getElementById("n-usadas");
     const totales = document.getElementById("n-totales");
     totales.innerText = totalPreguntas - 1;
-    // Función para actualizar la barra de progreso
     function actualizarProgreso() {
         contestadas.innerText = preguntasContestadas;
-        preguntasContestadas++; // Incrementa el número de preguntas contestadas
-        let porcentaje = (preguntasContestadas / totalPreguntas) * 100; // Calcula el porcentaje de progreso
-        document.getElementById("barraProgreso").style.width = porcentaje + "%"; // Actualiza el ancho del progreso
+        preguntasContestadas++;
+        let porcentaje = (preguntasContestadas / totalPreguntas) * 100;
+        document.getElementById("barraProgreso").style.width = porcentaje + "%";
     }
 
-    // Llamar a la función cada vez que el usuario responda una pregunta
-    // Ejemplo de llamada:
-    actualizarProgreso(); // Esto se llamaría en el evento de cada respuesta
+    actualizarProgreso();
 
-    // Seleccionar una pregunta aleatoria no usada
     const nivelPreguntas = preguntas[nivelSeleccionado];
     let index;
     do {
