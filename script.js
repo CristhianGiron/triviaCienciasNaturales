@@ -353,11 +353,11 @@ function seleccionarNivel(nivel) {
 function siguientePregunta() {
 
 
-    if (preguntasUsadas.length >= 6) {
+    if (preguntasUsadas.length >= 5) {
         mostrarResultados();
         return;
     }
-    let totalPreguntas = 7;
+    let totalPreguntas = 6;
     let preguntasContestadas = preguntasUsadas.length + 1;
     const contestadas = document.getElementById("n-usadas");
     const totales = document.getElementById("n-totales");
@@ -502,8 +502,8 @@ function mostrarResultados() {
     document.getElementById("juego").classList.add("hidden");
     document.getElementById("resultado").classList.remove("hidden");
 
-    const mensaje = puntaje === 6 ? "¡Excelente trabajo!" : "Sigue practicando y lo harás mejor.";
-    document.getElementById("mensaje").innerText = `Tu puntaje final es: ${puntaje} de 6. ${mensaje} `;
+    const mensaje = puntaje === 5 ? "¡Excelente trabajo!" : "Sigue practicando y lo harás mejor.";
+    document.getElementById("mensaje").innerText = `Tu puntaje final es: ${puntaje} de 5. ${mensaje} `;
 }
 
 // Función para reiniciar el juego
