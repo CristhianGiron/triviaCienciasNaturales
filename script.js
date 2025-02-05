@@ -416,15 +416,15 @@ function verificarRespuesta(opcionSeleccionada) {
         if (boton.innerText === preguntaActual.respuesta && !correcta) {
             boton.style.boxShadow = "inset 0px 0px 10px 5px rgba(0, 255, 0, 0.8)";
             
-            let angle = -10; // Inicia en -10 grados
+            let angle = -10;
             let count = 0;
             const interval = setInterval(() => {
                 boton.style.transform = `rotate(${angle}deg)`;
-                angle = -angle; // Alterna entre -10 y 10 grados
+                angle = -angle;
                 count++;
-                if (count > 5) { // Repite 5 veces
+                if (count > 5) {
                     clearInterval(interval);
-                    boton.style.transform = "rotate(0deg)"; // Vuelve a su estado normal
+                    boton.style.transform = "rotate(0deg)";
                 }
             }, 100);
             
