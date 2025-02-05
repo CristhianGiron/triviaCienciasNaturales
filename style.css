@@ -270,7 +270,11 @@ position: relative;
 #mensaje {
   margin-top: 50%;
   margin-bottom: 0;
-  height: 50px;
+  display: flex;
+  height: 75px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 /* Si la pantalla es menor a 768px (típico tamaño de móviles) */
