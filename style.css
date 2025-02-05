@@ -267,9 +267,18 @@ position: relative;
   justify-content: center;
   padding: 60px;
 }
-#mensaje{
-  margin-top: 180px;
+#mensaje {
+  margin-top: 50%;
+  margin-bottom: 0;
 }
+
+/* Si la pantalla es menor a 768px (típico tamaño de móviles) */
+@media (max-width: 768px) {
+  #mensaje {
+      margin-top: 75%;
+  }
+}
+
 .happy{
   height: 100px;
   position: absolute;
