@@ -270,6 +270,7 @@ position: relative;
 #mensaje {
   margin-top: 50%;
   margin-bottom: 0;
+  height: 50px;
 }
 
 /* Si la pantalla es menor a 768px (típico tamaño de móviles) */
