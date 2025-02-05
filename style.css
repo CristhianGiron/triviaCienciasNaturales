@@ -268,7 +268,7 @@ position: relative;
   padding: 60px;
 }
 #mensaje {
-  margin-top: 50%;
+  margin-top: 180px;
   margin-bottom: 0;
   display: flex;
   height: 75px;
@@ -280,7 +280,7 @@ position: relative;
 /* Si la pantalla es menor a 768px (típico tamaño de móviles) */
 @media (max-width: 768px) {
   #mensaje {
-      margin-top: 75%;
+      margin-top: 155px;
   }
 }
 
