@@ -26,6 +26,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   width: 80%;
+  height: 80%;
   max-width: 500px;
   background-image: url(https://cdn.pixabay.com/photo/2015/12/26/05/53/wood-1108307_1280.jpg);
   background-repeat: no-repeat;
