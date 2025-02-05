@@ -384,6 +384,7 @@ function siguientePregunta() {
     document.getElementById("pregunta").innerText = preguntaActual.pregunta;
 
     const img = document.getElementById("imagenPregunta");
+    
     if (preguntaActual.imagen) {
         img.src = preguntaActual.imagen;
         img.classList.remove("hidden");
