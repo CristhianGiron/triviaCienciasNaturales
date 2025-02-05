@@ -18,17 +18,15 @@ Este es un juego interactivo basado en preguntas de opción múltiple que permit
 
 Para ejecutar este juego, necesitarás tener un navegador web moderno que soporte JavaScript, ya que el juego utiliza varias funcionalidades de JavaScript para manejar la lógica del juego y los efectos visuales.
 
-- Un servidor web local para cargar los archivos y servir los recursos como imágenes y audios (opcional, pero recomendado para evitar problemas con la carga de archivos locales).
-- Un archivo de audio (`tronido.mp3`) y otro para felicitaciones (`kids-upbeat-274398.mp3`) en las rutas especificadas.
-
 ## Instalación
 
 1. Clona este repositorio en tu máquina local:
     ```bash
-    git clone https://github.com/tu-usuario/juego-preguntas.git
+    git clone https://github.com/CristhianGiron/triviaCienciasNaturales.git
     ```
    
-2. Abre el archivo `index.html` en tu navegador para jugar.
+2. Abre el archivo `index.html` en tu navegador para jugar o ingresa a https://stunning-cupcake-bb6ef1.netlify.app.
+
 
 ## Cómo jugar
 
