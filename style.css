@@ -8,7 +8,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Centra verticalmente */
   height: 100vh;
   background-color: #f0f8ff;
   background-image: url(https://cdn.pixabay.com/photo/2019/08/27/22/23/nature-4435421_1280.jpg);
@@ -17,7 +17,6 @@ body {
   background-position: center;
   overflow-x: hidden;
 }
-
 
 .container {
   text-align: center;
@@ -32,6 +31,7 @@ body {
   background-size: cover;
   background-position: center;
 }
+
 
 button {
   width: 125px;
