@@ -384,6 +384,7 @@ function siguientePregunta() {
     document.getElementById("pregunta").innerText = preguntaActual.pregunta;
 
     const img = document.getElementById("imagenPregunta");
+    img.src= "";
     preguntaActual.imagen ? (img.src = preguntaActual.imagen, toggleVisibility(img, true)) : toggleVisibility(img, false);
 
     const opcionesDiv = document.getElementById("opciones");
