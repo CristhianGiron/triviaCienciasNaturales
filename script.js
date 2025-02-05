@@ -326,50 +326,50 @@ const preguntas = {
     ]
 };
 
-let nivelSeleccionado;
-let preguntasUsadas = [];
-let puntaje = 0;
-let preguntaActual;
+let nivelSeleccionado, preguntaActual, muted = localStorage.getItem("muted") === "true";
+let preguntasUsadas = [], puntaje = 0;
 const audio = document.getElementById("audio");
 const tronido = new Audio('./music/mouse-click-290204.mp3');
 const felicitaciones = new Audio('./music/kids-upbeat-274398.mp3');
-
-
 const botones = document.querySelectorAll('button');
+const playButton = document.getElementById("playAudio");
+const info = document.getElementById("info");
+const info_content = document.getElementById("info-content");
+const close = document.getElementById("close");
+let estado_info = false;
+info_content.classList.add("hidden");
+
+audio.muted = muted;
+updateAudioButton();
+
+function updateAudioButton() {
+    playButton.classList.toggle("play", !muted);
+    playButton.classList.toggle("pause", muted);
+}
+
+function toggleVisibility(element, show) {
+    element.classList[show ? "remove" : "add"]("hidden");
+}
 
 function seleccionarNivel(nivel) {
-    audio.play()
-    document.getElementById("playAudio").classList.remove("hidden");
-
+    audio.play();
+    toggleVisibility(playButton, true);
     nivelSeleccionado = nivel;
     preguntasUsadas = [];
     puntaje = 0;
-    document.getElementById("inicio").classList.add("hidden");
-    document.getElementById("juego").classList.remove("hidden");
+    toggleVisibility(document.getElementById("inicio"), false);
+    toggleVisibility(document.getElementById("juego"), true);
     siguientePregunta();
 }
 
-
 function siguientePregunta() {
+    if (preguntasUsadas.length >= 5) return mostrarResultados();
 
-
-    if (preguntasUsadas.length >= 5) {
-        mostrarResultados();
-        return;
-    }
     let totalPreguntas = 6;
     let preguntasContestadas = preguntasUsadas.length + 1;
-    const contestadas = document.getElementById("n-usadas");
-    const totales = document.getElementById("n-totales");
-    totales.innerText = totalPreguntas - 1;
-    function actualizarProgreso() {
-        contestadas.innerText = preguntasContestadas;
-        preguntasContestadas++;
-        let porcentaje = (preguntasContestadas / totalPreguntas) * 100;
-        document.getElementById("barraProgreso").style.width = porcentaje + "%";
-    }
-
-    actualizarProgreso();
+    document.getElementById("n-usadas").innerText = preguntasContestadas;
+    document.getElementById("n-totales").innerText = totalPreguntas - 1;
+    document.getElementById("barraProgreso").style.width = (preguntasContestadas / totalPreguntas) * 100 + "%";
 
     const nivelPreguntas = preguntas[nivelSeleccionado];
     let index;
@@ -379,20 +379,13 @@ function siguientePregunta() {
 
     preguntasUsadas.push(index);
     preguntaActual = nivelPreguntas[index];
-    document.getElementById("atras").classList.remove("hidden");
-    document.getElementById("img-logo").classList.add("hidden");
+    toggleVisibility(document.getElementById("atras"), true);
+    toggleVisibility(document.getElementById("img-logo"), false);
     document.getElementById("pregunta").innerText = preguntaActual.pregunta;
 
     const img = document.getElementById("imagenPregunta");
-    
-    if (preguntaActual.imagen) {
-        img.src = preguntaActual.imagen;
-        img.classList.remove("hidden");
-    } else {
-        img.classList.add("hidden");
-    }
+    preguntaActual.imagen ? (img.src = preguntaActual.imagen, toggleVisibility(img, true)) : toggleVisibility(img, false);
 
-    // Mostrar las opciones
     const opcionesDiv = document.getElementById("opciones");
     opcionesDiv.innerHTML = "";
     preguntaActual.opciones.forEach(opcion => {
@@ -403,168 +396,95 @@ function siguientePregunta() {
     });
 }
 
-// Función para verificar la respuesta
 function verificarRespuesta(opcionSeleccionada) {
-    const img = document.getElementById("imagenPregunta");
-    const img_container = document.getElementById("img-base");
-    const opcionesDiv = document.getElementById("opciones").children; // Obtener todos los botones de opciones
+    const opcionesDiv = document.getElementById("opciones").children;
     tronido.play();
 
-    if (opcionSeleccionada === preguntaActual.respuesta) {
+    const correcta = opcionSeleccionada === preguntaActual.respuesta;
+    if (correcta) puntaje++;
 
-        puntaje++;
-        /*
-        img.src = "./pngwing.com.png";
-        img_container.style.boxShadow = "0 0 10px 5px rgba(0, 255, 0, 0.8)"; // Sombra neón verde
-        */
-        Array.from(opcionesDiv).forEach(boton => {
-            boton.style.pointerEvents = "none";
-
-            if (boton.innerText === opcionSeleccionada) {
-                boton.style.boxShadow = "inset 0px 0px 10px 5px rgba(0, 255, 0, 0.8)";
-                boton.style.position = "relative";
-                const img_sms = document.createElement("img");
-                img_sms.style.position = "absolute";
-                img_sms.style.right = "0";
-                img_sms.style.top = "0";
-                img_sms.src = "./images/pngwing.com.png";
-                img_sms.style.padding = "2px 5px";
-                img_sms.style.borderRadius = "5px";
-                img_sms.style.height = "30px";
-
-                boton.appendChild(img_sms);
-            }
-        });
-
-
-    } else {
-
-        /*
-        img.src = "./pngwing.com (1).png";
-        img_container.style.boxShadow = "0 0 10px 5px rgba(255, 0, 0, 0.8)"; // Sombra neón roja
-        */
-        Array.from(opcionesDiv).forEach(boton => {
-            boton.style.pointerEvents = "none";
-            if (boton.innerText === opcionSeleccionada) {
-                boton.style.boxShadow = "inset 0px 0px 10px 5px rgba(255, 0, 0, 0.8)";
-                boton.style.position = "relative";
-
-                // Crear el div con el mensaje
-                const img_sms = document.createElement("img");
-                img_sms.style.position = "absolute";
-                img_sms.style.right = "0";
-                img_sms.style.top = "0";
-                img_sms.src = "./images/pngwing.com (1).png"
-                img_sms.style.padding = "2px 5px";
-                img_sms.style.borderRadius = "5px";
-                img_sms.style.height = "30px"
-
-                boton.appendChild(img_sms);
-            }
-        });
-
-        Array.from(opcionesDiv).forEach(boton => {
-            boton.style.pointerEvents = "none";
-            if (boton.innerText === preguntaActual.respuesta) {
-
-                boton.style.boxShadow = "inset 0px 0px 10px 5px rgba(0, 255, 0, 0.8)";
-                // Crear el div con el mensaje
-                const img_sms = document.createElement("div");
-                img_sms.style.marginLeft = "10px";
-                img_sms.style.color = "red";
-                img_sms.style.fontSize = "14px";
-                img_sms.style.display = "inline-block";
-                img_sms.style.position = "absolute";
-                boton.parentNode.insertBefore(img_sms, boton.nextSibling);
-            }
-        });
-    }
-
-    // Muestra la imagen durante 10 segundos y luego pasa a la siguiente pregunta
-    setTimeout(function () {
-        const img_container = document.getElementById("img-base");
-        img_container.style.boxShadow = "none";
+    Array.from(opcionesDiv).forEach(boton => {
+        boton.style.pointerEvents = "none";
+        boton.style.position = "relative";
+        if (boton.innerText === opcionSeleccionada) {
+            boton.style.boxShadow = `inset 0px 0px 10px 5px rgba(${correcta ? "0, 255, 0" : "255, 0, 0"}, 0.8)`;
+            const img_sms = document.createElement("img");
+            img_sms.src = `./images/correcto${correcta ? "" : "1"}.png`;
+            img_sms.style = "position: absolute; right: 0; top: 0; padding: 2px 5px; border-radius: 5px; height: 30px";
+            boton.appendChild(img_sms);
+        }
+        if (boton.innerText === preguntaActual.respuesta && !correcta) {
+            boton.style.boxShadow = "inset 0px 0px 10px 5px rgba(0, 255, 0, 0.8)";
+            
+            let angle = -10; // Inicia en -10 grados
+            let count = 0;
+            const interval = setInterval(() => {
+                boton.style.transform = `rotate(${angle}deg)`;
+                angle = -angle; // Alterna entre -10 y 10 grados
+                count++;
+                if (count > 5) { // Repite 5 veces
+                    clearInterval(interval);
+                    boton.style.transform = "rotate(0deg)"; // Vuelve a su estado normal
+                }
+            }, 100);
+            
+            const img_sms = document.createElement("img");
+            img_sms.src = "./images/correcto.png";
+            img_sms.style = "position: absolute; right: 0; top: 0; padding: 2px 5px; border-radius: 5px; height: 30px";
+            boton.appendChild(img_sms);
+        }
+        
+    });
+    setTimeout(() => {
         Array.from(opcionesDiv).forEach(boton => {
             boton.style.boxShadow = "";
             boton.style.pointerEvents = "auto";
         });
         siguientePregunta();
-    }, 1500); // 1500 milisegundos = 15 segundos
+    }, 1500);
 }
 
-
-
-// Función para mostrar resultados
 function mostrarResultados() {
-    felicitaciones.play();
-    audio.muted=true;
-    document.getElementById("img-logo").classList.add("hidden");
-    document.getElementById("atras").classList.add("hidden");
-    document.getElementById("juego").classList.add("hidden");
-    document.getElementById("resultado").classList.remove("hidden");
-
-    const mensaje = puntaje === 5 ? "¡Excelente trabajo!" : "Sigue practicando y lo harás mejor.";
-    document.getElementById("mensaje").innerText = `Tu puntaje final es: ${puntaje} de 5. ${mensaje} `;
+    felicitaciones.play(); 
+    felicitaciones.muted=muted;
+    audio.pause();
+    updateAudioButton();
+    toggleVisibility(document.getElementById("img-logo"), false);
+    toggleVisibility(document.getElementById("atras"), false);
+    toggleVisibility(document.getElementById("juego"), false);
+    toggleVisibility(document.getElementById("resultado"), true);
+    document.getElementById("mensaje").innerText = `Tu puntaje final es: ${puntaje} de 5. ${puntaje === 5 ? "¡Excelente trabajo!" : "Sigue practicando y lo harás mejor."}`;
 }
 
-// Función para reiniciar el juego
 function reiniciarJuego() {
     felicitaciones.pause();
-    audio.muted=false;
-    document.getElementById("img-logo").classList.remove("hidden");
-    document.getElementById("atras").classList.add("hidden");
-    document.getElementById("juego").classList.add("hidden");
-    document.getElementById("resultado").classList.add("hidden");
-    document.getElementById("inicio").classList.remove("hidden");
+    audio.play;
+    audio.muted=muted;
+    updateAudioButton();
+    toggleVisibility(document.getElementById("img-logo"), true);
+    toggleVisibility(document.getElementById("atras"), false);
+    toggleVisibility(document.getElementById("juego"), false);
+    toggleVisibility(document.getElementById("resultado"), false);
+    toggleVisibility(document.getElementById("inicio"), true);
 }
 
-
-
-let muted = false;
-// Intentar reproducir el audio automáticamente
-window.addEventListener("load", () => {
-    audio.play().then(() => {
-        muted = true;
-        console.log("El audio comenzó a reproducirse automáticamente.");
-    }).catch((error) => {
-        console.error("El navegador bloqueó la reproducción automática:", error);
-    });
-});
-
-const info = document.getElementById("info");
-const info_content = document.getElementById("info-content");
-let estado_info= false;
-info_content.classList.add("hidden");
-info.addEventListener("click", () => {
-   if (estado_info==true) {
-    estado_info=false;
-    info_content.classList.add("hidden");
-   }else{
-    estado_info=true;
-    info_content.classList.remove("hidden");
-   }
-
-});
-// Activar el sonido al hacer clic en el botón
-const playButton = document.getElementById("playAudio");
 playButton.addEventListener("click", () => {
-    if (muted) {
-        muted = false
-        document.getElementById("playAudio").classList.remove("play");
-        document.getElementById("playAudio").classList.add("pause");
-        audio.muted = true; // Desactivar el silencio
-    } else {
-        muted = true
-        document.getElementById("playAudio").classList.add("play");
-        document.getElementById("playAudio").classList.remove("pause");
-        audio.muted = false; // Desactivar el silencio
-    }
-
+    muted = !muted;
+    localStorage.setItem("muted", muted);
+    audio.muted = muted;
+    felicitaciones.muted = muted;
+    tronido.muted = muted;
+    updateAudioButton();
 });
 
-// Añadir el mismo event listener a todos los botones
-botones.forEach(boton => {
-    boton.addEventListener('click', function () {
-        tronido.play();
-    });
+botones.forEach(boton => boton.addEventListener('click', () => tronido.play()));
+
+info.addEventListener("click", () => {
+    estado_info = !estado_info;
+    toggleVisibility(info_content, estado_info);
+});
+
+close.addEventListener("click", () => {
+    estado_info = false;
+    toggleVisibility(info_content, false);
 });

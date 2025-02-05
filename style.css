@@ -311,3 +311,27 @@ position: relative;
   margin-bottom: -10px;
 }
 
+.close{
+  color: black;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  font-size: 27px;
+  transition: all 0.5s ease;
+}
+
+.close:hover{
+  transform: rotate(135deg);
+  color: white;
+}
+
